@@ -25,7 +25,6 @@ TARGET_CPU_ABI_LIST := arm64-v8a,armeabi-v7a,armeabi
 TARGET_CPU_ABI_LIST_64_BIT := arm64-v8a
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK := device/amazon/sloane/mkbootimg.mk
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x04000000 --tags_offset 0x00000100
 TARGET_PREBUILT_KERNEL := device/amazon/sloane/prebuilt/kernel
 BOARD_KERNEL_BASE := 0x80000000
