@@ -145,3 +145,10 @@ persist.wifi.rssi.thresholds=-84,-73,-64,-60
 
 # disabling this in addition to android.software.backup is needed to stop BackupManagerService from running
 ro.backup.disable=true
+
+# Disable SELinux (Probably not working)
+ro.boot.selinux=disable
+ro.build.selinux=1
+
+# Enable FireOS flags
+ro.amazon.fosflags=1
