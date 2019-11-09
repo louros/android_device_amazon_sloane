@@ -132,8 +132,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
-    device/amazon/tank/permissions/tv_core_hardware.xml:system/etc/permissions/tv_core_hardware.xml \
-    device/amazon/tank/permissions/android.hardware.hdmi.cec.xml:system/etc/permissions/android.hardware.hdmi.cec.xml
+    device/amazon/sloane/permissions/tv_core_hardware.xml:system/etc/permissions/tv_core_hardware.xml \
+    device/amazon/sloane/permissions/android.hardware.hdmi.cec.xml:system/etc/permissions/android.hardware.hdmi.cec.xml
 
 # Config files
 PRODUCT_COPY_FILES += \
@@ -142,10 +142,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
     frameworks/av/media/libeffects/data/audio_effects.conf:system/etc/audio_effects.conf \
-    device/amazon/tank/configs/audio_policy.conf:system/etc/audio_policy.conf \
-    device/amazon/tank/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    device/amazon/tank/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    device/amazon/tank/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
+    device/amazon/sloane/configs/audio_policy.conf:system/etc/audio_policy.conf \
+    device/amazon/sloane/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    device/amazon/sloane/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    device/amazon/sloane/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
 
 # Fosflags script for boot
 PRODUCT_COPY_FILES += device/amazon/sloane/rootdir/init.fosflags.sh:system/etc/init.fosflags.sh
@@ -190,4 +190,4 @@ $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/amazon/sloane/tank-sloane.mk)
+$(call inherit-product-if-exists, vendor/amazon/sloane/sloane-vendor.mk)
