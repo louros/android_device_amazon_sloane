@@ -150,12 +150,6 @@ PRODUCT_COPY_FILES += \
 # Fosflags script for boot
 PRODUCT_COPY_FILES += device/amazon/sloane/rootdir/init.fosflags.sh:system/etc/init.fosflags.sh
 
-# rbox's TWRP
-PRODUCT_COPY_FILES += \
-    device/amazon/sloane/prebuilt/binaries/2ndinit:system/etc/recovery/2ndinit \
-    device/amazon/sloane/prebuilt/binaries/2ndinitstub:system/bin/ext4_resize \
-    device/amazon/sloane/prebuilt/ramdisk-recovery.cpio.lzma:system/etc/recovery/ramdisk-recovery.cpio.lzma
-
 # Thermal
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/thermal.policy.conf:system/etc/.tp/thermal.policy.conf \
