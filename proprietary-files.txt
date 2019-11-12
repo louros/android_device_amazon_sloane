@@ -12,7 +12,7 @@ bin/dmesg_log.sh
 bin/dump-ramdump.sh
 bin/hostapd
 bin/hostapd_cli
-#bin/ext4_resize
+bin/ext4_resize
 bin/hdmi
 bin/idme
 bin/kisd
@@ -185,6 +185,7 @@ lib/libthermalservice.so
 lib/libtinyalsa.so
 lib/libtoe.so
 lib/libtrapz.so
+lib/libui_ext.so
 lib/libtz_uree.so
 lib/libunwind.so
 lib/libunwind-ptrace.so
@@ -319,6 +320,7 @@ lib64/libthermalservice.so
 lib64/libtinyalsa.so
 lib64/libtoe.so
 lib64/libtrapz.so
+lib64/libui_ext.so
 lib64/libtz_uree.so
 lib64/libunwind.so
 lib64/libunwind-ptrace.so
