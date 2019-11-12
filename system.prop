@@ -2,7 +2,6 @@
 # system.prop for sloane
 #
 
-
 # ADB on recovery
 service.adb.root=1
 
@@ -38,6 +37,11 @@ wifi.tethering.interface=ap0
 ro.opengles.version=196609
 
 wifi.direct.interface=p2p0
+
+# From sloane ramdisk. This "should" enable ADB at boot.
+sys.boot_completed=1
+ro.kernel.qemu=1
+sys.usb.config=adb
 
 # LAB usb
 ro.usb.vid=1949
