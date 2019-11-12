@@ -87,6 +87,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.media.avsync=true
 
+# Enable adb as root in boot to debug
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0 \
+    persist.adb.notify=0 \
+    ro.secure=0 \
+    persist.sys.root_access=3 \
+    ro.debuggable=1 \
+    persist.service.adb.enable=1  
+
 # Zygote it's 64bit
 #PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	#ro.zygote=zygote64_32

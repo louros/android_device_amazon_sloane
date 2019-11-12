@@ -47,13 +47,16 @@ ro.sys.usb.mtp.whql.enable=0
 # Power off opt in IPO
 sys.ipo.pwrdncap=2
 
-ro.sys.usb.storage.type=mtp,mass_storage
+ro.sys.usb.storage.type=mtp,mass_storage,adb
+
+# Enable adb and mtp
+persist.sys.usb.config=mtp,adb 
 
 # USB BICR function
 ro.sys.usb.bicr=yes
 
 # USB Charge only function
-ro.sys.usb.charging.only=yes
+ro.sys.usb.charging.only=false
 
 #
 # Set default adb over usb debugging
@@ -127,11 +130,6 @@ ro.lockscreen.disable.default=1
 # 0 MDP INFO (the entire MDP log)
 persist.dpframework.log.level = 3
 
-#
-# Set default time zone for PST/PDT.
-#
-persist.sys.timezone=America/Los_Angeles
-
 # ACOS_MOD_BEGIN {mtk_enhancement}
 # whether or not to use HWC for virtual displays
 persist.hwc.enable_vds=0
@@ -148,7 +146,6 @@ ro.backup.disable=true
 
 # Disable SELinux (Probably not working)
 ro.boot.selinux=disable
-ro.build.selinux=1
 
 # Enable FireOS flags
 ro.amazon.fosflags=1
