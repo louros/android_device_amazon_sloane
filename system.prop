@@ -2,6 +2,10 @@
 # system.prop for sloane
 #
 
+
+# ADB on recovery
+service.adb.root=1
+
 rild.libpath=/system/lib/mtk-ril.so
 rild.libargs=-d /dev/ttyC0
 
