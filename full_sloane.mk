@@ -186,6 +186,20 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
 
+# BootMENU
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/twrp/ramdisk-recovery.cpio.lzma:system/recovery/ramdisk-recovery.cpio.lzma \
+     $(LOCAL_PATH)/twrp/2ndinitstub:system/recovery/2ndinitstub \
+     $(LOCAL_PATH)/twrp/2ndinit:system/recovery/2ndinit \
+     $(LOCAL_PATH)/twrp/manage_recovery:system/xbin/manage_recovery
+
+# SU
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/twrp/su/su:system/xbin/su \
+     $(LOCAL_PATH)/twrp/su/supolicy:system/xbin/supolicy \
+     $(LOCAL_PATH)/twrp/su/libsupol.so:system/lib64/libsupol.so \
+     $(LOCAL_PATH)/twrp/su/SuperSU/SuperSU.apk:system/app/SuperSU/SuperSU.apk
+
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
 
