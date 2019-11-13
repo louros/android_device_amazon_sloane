@@ -2,6 +2,11 @@
 # system.prop for sloane
 #
 
+# No RIL
+ro.carrier=wifi-only
+ro.carrier=wifi-only
+ro.radio.noril=yes
+
 # ADB on recovery
 service.adb.root=1
 
