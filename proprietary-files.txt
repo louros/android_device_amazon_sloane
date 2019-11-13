@@ -146,7 +146,6 @@ lib/libm4u.so
 lib/libmediacodecloggerservice.so
 lib/libmediacodeclogger.so
 lib/libmediaerrorlogger.so
-lib/libmedia_jni.so
 lib/libmfvfactory.so
 lib/libmedialogservice.so
 lib/libmhalImageCodec.so
@@ -288,7 +287,6 @@ lib64/libkeystore_binder.so
 lib64/libm4u.so
 lib64/libmediacodecloggerservice.so
 lib64/libmediacodeclogger.so
-lib64/libmedia_jni.so
 lib64/libmhalImageCodec.so
 lib64/libmsbc_mtk.so
 lib64/libm.so
