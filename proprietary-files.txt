@@ -199,6 +199,7 @@ lib/libvcodec_oal.so
 lib/libvcodec_utility.so
 lib/libvorbisidec.so
 lib/libvp9dec_sa.ca7.so
+lib/libwebviewchromium_loader
 lib/libwebrtc_audio_preprocessing.so
 lib/libwlfAmzn.so
 lib/libwpa_client.so
@@ -330,6 +331,7 @@ lib64/libusbhost.so
 lib64/libusb.so
 lib64/libvcodecdrv.so
 lib64/libvorbisidec.so
+lib64/libwebviewchromium_loader
 lib64/libwebrtc_audio_preprocessing.so
 lib64/libwlfAmzn.so
 lib64/libwpa_client.so
