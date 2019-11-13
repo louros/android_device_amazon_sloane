@@ -95,6 +95,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 BLOCK_BASED_OTA := false
 
+# Exta scripts
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/amazon/sloane/releasetools/ota_from_target_files
+
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
 
