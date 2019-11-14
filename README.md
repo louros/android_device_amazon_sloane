@@ -17,11 +17,11 @@ This branch is for building LineageOS 12.1/CM12.1
 ### Known Working/Bugs
 - [x] TWRP boot menu
 - [x] Kernel
-- [x] SELinux ENFORCING
+- [x] SELinux (Permissive :D)
 - [x] Gralloc
 - [x] ADB
 - [ ] OMX
-- [ ] HWC
+- [x] HWC
 - [ ] Sound
 - [ ] Bluetooth
 - [ ] Wi-Fi
