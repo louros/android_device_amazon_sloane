@@ -396,4 +396,3 @@ vendor/lib64/mediadrm/libdrmclearkeyplugin.so
 vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
 vendor/app/Ds/Ds.apk
 xbin/trapz
-xbin/vitals_collection_agent
