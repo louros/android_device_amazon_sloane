@@ -167,6 +167,7 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_PACKAGES += \
         audio.a2dp.default \
+        audio.btle.default.so \
         libtinycompress
 
 # Bluetooth
@@ -179,7 +180,7 @@ PRODUCT_PACKAGES += \
 
 # network
 PRODUCT_PACKAGES += \
-    netd
+       netd
 
 # IPv6 tethering
 PRODUCT_PACKAGES += \
@@ -192,13 +193,6 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/bootmenu/2ndinitstub:system/recovery/2ndinitstub \
      $(LOCAL_PATH)/bootmenu/2ndinit:system/recovery/2ndinit \
      $(LOCAL_PATH)/bootmenu/manage_recovery:system/xbin/manage_recovery
-
-# SU
-PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/bootmenu/su/su:system/xbin/su \
-     $(LOCAL_PATH)/bootmenu/su/supolicy:system/xbin/supolicy \
-     $(LOCAL_PATH)/bootmenu/su/libsupol.so:system/lib64/libsupol.so \
-     $(LOCAL_PATH)/bootmenu/su/SuperSU/SuperSU.apk:system/app/SuperSU/SuperSU.apk
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
