@@ -39,6 +39,7 @@ etc/firmware/mt7662_firmware_e3_tvbox.bin
 etc/firmware/mt7662_patch_e3_hdr.bin
 etc/firmware/dvb-fe-xc5000-1.6.114.fw
 etc/leds.xml
+etc/mixer_paths.xml
 etc/chronos.conf
 etc/clatd.conf
 etc/compat_hint.conf
