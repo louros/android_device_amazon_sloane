@@ -88,7 +88,7 @@ lib/libamr_wrap.so
 lib/libamazon_remotes.so
 lib/libaudiocompensationfilter.so
 lib/libaudiocomponentengine.so
-lib/libaudiocustparam.so
+#lib/libaudiocustparam.so
 lib/libaudiodcrflt.so
 lib/libaudioeffect_jni.so
 lib/libaudioflinger.so
@@ -239,7 +239,7 @@ lib64/libamazonwifiservice.so
 lib64/libamazon_remotes.so
 lib64/libaudiocompensationfilter.so
 lib64/libaudiocomponentengine.so
-lib64/libaudiocustparam.so
+#lib64/libaudiocustparam.so
 lib64/libaudiodcrflt.so
 lib64/libaudioeffect_jni.so
 lib64/libaudiopolicymanagerdefault.so
