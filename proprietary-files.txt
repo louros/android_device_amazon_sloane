@@ -205,7 +205,6 @@ lib/libwebviewchromium_loader.so
 lib/libwebrtc_audio_preprocessing.so
 lib/libwlfAmzn.so
 lib/libwpa_client.so
-lib/libwifi-service.so
 lib/soundfx/libaudiopreprocessing.so
 lib/soundfx/libbundlewrapper.so
 lib/soundfx/libdownmix.so
@@ -338,7 +337,6 @@ lib64/libwebviewchromium_loader.so
 lib64/libwebrtc_audio_preprocessing.so
 lib64/libwlfAmzn.so
 lib64/libwpa_client.so
-lib64/libwifi-service.so
 vendor/bin/pvrdebug
 vendor/bin/pvrsrvctl
 vendor/data/amz.rsa
