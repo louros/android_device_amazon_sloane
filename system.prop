@@ -10,8 +10,9 @@ ro.radio.noril=1
 ro.carrier=wifi-only
 persist.radio.noril=1
 
-# ADB on recovery
+# ADB on boot
 service.adb.root=1
+sys.usb.config=adb
 
 rild.libpath=/system/lib/mtk-ril.so
 rild.libargs=-d /dev/ttyC0
@@ -49,11 +50,6 @@ wifi.tethering.interface=ap0
 ro.opengles.version=196609
 
 wifi.direct.interface=p2p0
-
-# From sloane ramdisk. This "should" enable ADB at boot.
-sys.boot_completed=1
-ro.kernel.qemu=1
-sys.usb.config=adb
 
 # LAB usb
 ro.usb.vid=1949
