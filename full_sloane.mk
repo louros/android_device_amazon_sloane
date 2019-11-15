@@ -188,12 +188,13 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
 
-# BootMENU
+# Binaries
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/bootmenu/ramdisk-recovery.cpio.lzma:system/recovery/ramdisk-recovery.cpio.lzma \
      $(LOCAL_PATH)/bootmenu/2ndinitstub:system/recovery/2ndinitstub \
      $(LOCAL_PATH)/bootmenu/2ndinit:system/recovery/2ndinit \
-     $(LOCAL_PATH)/bootmenu/manage_recovery:system/xbin/manage_recovery
+     $(LOCAL_PATH)/bootmenu/manage_recovery:system/xbin/manage_recovery \
+     $(LOCAL_PATH)/bootmenu/logger:system/bin/logger
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
