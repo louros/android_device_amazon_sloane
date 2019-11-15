@@ -20,11 +20,12 @@ This branch is for building LineageOS 12.1/CM12.1
 - [x] SELinux (Permissive :D)
 - [x] Gralloc
 - [x] ADB
+- [x] Boots
 - [ ] OMX
 - [x] HWC
 - [ ] Sound
 - [ ] Bluetooth
-- [ ] Wi-Fi
+- [x] Wi-Fi
 - [ ] Cast screen
 
 ## Build ##
