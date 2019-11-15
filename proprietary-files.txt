@@ -106,7 +106,6 @@ lib/libbessound_hd_mtk.so
 lib/libbessound_mtk.so
 lib/libbluetoothem_mtk.so
 lib/libbluetooth_hw_test.so
-lib/libbluetooth_jni.so
 lib/libbluetooth_mtk.so
 lib/libbluetooth_mtk_pure.so
 lib/libbluetooth_relayer.so
