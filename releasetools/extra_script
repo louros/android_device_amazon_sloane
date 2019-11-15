@@ -1,4 +1,3 @@
-mount("ext4", "EMMC", "/dev/block/platform/mtk-msdc.0/by-name/system", "/system", "");
 set_metadata("/system/etc/init.fosflags.sh", "uid", 0, "gid", 0, "mode", 0755, "selabel", "u:object_r:system_file:s0");
 symlink("/system/framework/org.cyanogenmod.platform.jar", "/system/framework/fosinit.jar");
 symlink("/system/framework/org.cyanogenmod.hardware.jar", "/system/framework/fosservices.jar");
@@ -9,5 +8,3 @@ symlink("../recovery/2ndinitstub", "/system/bin/ext4_resize");
 ui_print("Disabling stock recovery...");
 set_metadata("/system/xbin/manage_recovery", "uid", 0, "gid", 0, "mode", 0755, "capabilities", 0x0);
 run_program("/sbin/sh", "-c", "/system/xbin/manage_recovery");
-run_program("/sbin/mkdir", "/system/addon.d");
-unmount("/system");
