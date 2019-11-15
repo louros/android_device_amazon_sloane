@@ -131,7 +131,6 @@ lib/libGdmaScalerPipe.so
 lib/libged.so
 lib/libgpu_aux.so
 lib/libhardware.so
-lib/libhardware_legacy.so
 lib/libharfbuzz_ng.so
 lib/libgralloc_extra.so
 lib/libgui_ext.so
@@ -274,7 +273,6 @@ lib64/libGdmaScalerPipe.so
 lib64/libged.so
 lib64/libgpu_aux.so
 lib64/libhardware.so
-lib64/libhardware_legacy.so
 lib64/libharfbuzz_ng.so
 lib64/libgralloc_extra.so
 lib64/libgui_ext.so
