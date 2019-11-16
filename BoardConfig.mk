@@ -1,6 +1,7 @@
 # inherit from the proprietary version
 -include vendor/amazon/sloane/BoardConfig.mk
 
+# Dalvik
 DALVIK_VM_LIB := true
 
 # Platform
@@ -15,13 +16,11 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_VARIANT := generic
-
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a15
-
 TARGET_CPU_ABI_LIST := arm64-v8a,armeabi-v7a,armeabi
 TARGET_CPU_ABI_LIST_64_BIT := arm64-v8a
 
@@ -37,6 +36,9 @@ BOARD_SECOND_OFFSET := 0x00f00000
 
 # We use 64 bit binder
 TARGET_USES_64_BIT_BINDER := true
+
+# MTK Headers
+TARGET_SPECIFIC_HEADER_PATH := device/amazon/sloane/include
 
 # MTK Flags
 BOARD_HAS_MTK_HARDWARE := true
@@ -64,7 +66,8 @@ WIFI_DRIVER_FW_PATH_STA:=P2P
 
 # Bluetooth defines
 BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_BCM := true
+BOARD_HAVE_BLUETOOTH_MTK := true
+BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/amazon/sloane/bluetooth
 
 # Graphics
@@ -77,6 +80,7 @@ TARGET_DISPLAY_USE_RETIRE_FENCE := true
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 1024*1024
 
+# VSYNC
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 TARGET_HAS_WAITFORVSYNC := true
 
@@ -93,6 +97,7 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 444596224
 BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
 
+# No system.new.dat
 BLOCK_BASED_OTA := false
 
 # Exta scripts
@@ -103,19 +108,16 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := sloane
-TARGET_BOOTLOADER_BOARD_NAME := mt8173_loader
+TARGET_BOOTLOADER_BOARD_NAME := mt8173
 
 # TWRP Flags
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
-
 TW_DEFAULT_EXTERNAL_STORAGE := true
-
 BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_SDCARD_ON_DATA := true
-
 TW_NO_BATT_PERCENT := true
 TW_NO_SCREEN_TIMEOUT := true
-#TW_BOOT_MENU := true
 TW_DEFAULT_BACKUP_LIST := "/system_image;/data;/boot;"
 
+# Extras
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)

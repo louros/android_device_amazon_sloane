@@ -96,11 +96,6 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.debuggable=1 \
     persist.service.adb.enable=1  
 
-# Zygote it's 64bit
-#PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-	#ro.zygote=zygote64_32
-# Using prebuilt boot.img :/
-
 # Inherit from fonts/svox
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
 $(call inherit-product-if-exists, external/svox/pico/lang/all_pico_languages.mk)
@@ -120,13 +115,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/amazon/sloane/rootdir,root)
 
-# Copy the kernel
+# Kernel
 PRODUCT_COPY_FILES += \
         device/amazon/sloane/prebuilt/kernel:kernel
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Overlays
@@ -156,7 +150,7 @@ PRODUCT_COPY_FILES += \
     device/amazon/sloane/configs/media_profiles.xml:system/etc/media_profiles.xml \
     device/amazon/sloane/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
 
-# Fosflags script for boot
+# Fosflags
 PRODUCT_COPY_FILES += device/amazon/sloane/rootdir/init.fosflags.sh:system/etc/init.fosflags.sh
 
 # Thermal
@@ -181,12 +175,12 @@ PRODUCT_PACKAGES += \
 
 # network
 PRODUCT_PACKAGES += \
-       netd
+        netd
 
 # IPv6 tethering
 PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes
+        ebtables \
+        ethertypes
 
 # Binaries
 PRODUCT_COPY_FILES += \

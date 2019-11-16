@@ -32,7 +32,7 @@ LINEEND=""
 echo " $OUTDIR/proprietary/$FILE:system/$FILE$LINEEND" >> $MAKEFILE
 done
 (cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor.mk
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -49,7 +49,7 @@ done
 \$(call inherit-product, vendor/$VENDOR/$DEVICE/$DEVICE-vendor-blobs.mk)
 EOF
 (cat << EOF) > ../../../$OUTDIR/BoardConfigVendor.mk
-# Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

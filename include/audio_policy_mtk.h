@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
+ * Copyright (C) 2011 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,14 +14,16 @@
  * limitations under the License.
  */
 
-#ifndef _BDROID_BUILDCFG_H
-#define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "Amazon Fire TV 2"
-#define BTA_AV_MAX_A2DP_MTU  1788
-#define BLE_INCLUDED TRUE
-#define BTA_GATT_INCLUDED TRUE
-#define SMP_INCLUDED TRUE
+#ifndef AUDIO_POLICY_INTERFACE_MTK_H
+#define AUDIO_POLICY_INTERFACE_MTK_H
 
-#endif
+#include <hardware/audio_policy.h>
 
+struct audio_policy_mtk: audio_policy{
+//    struct audio_policy legacy_audio_policy;
+    int (*set_policy_parameters)(struct audio_policy *pol, int par1, int par2, int par3, int par4);
+
+};
+
+#endif  // AUDIO_POLICY_INTERFACE_MTK_H

@@ -1,10 +1,7 @@
-# Inherit some common CM stuff.
+# Inherit some common for TV devices.
 $(call inherit-product, vendor/cm/config/common_full_tv.mk)
 
-# Include CM LatinIME dictionaries
-#PRODUCT_PACKAGE_OVERLAYS += vendor/cm/overlay/dictionaries
-
-# Inherit device configuration for Fire TV Stick
+# Inherit device configuration for Fire TV 2.
 $(call inherit-product, device/amazon/sloane/full_sloane.mk)
 
 TARGET_SCREEN_WIDTH := 600
