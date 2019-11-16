@@ -165,3 +165,9 @@ ro.boot.selinux=disable
 
 # Enable FireOS flags
 ro.amazon.fosflags=1
+
+# Bluetooth
+mediatek.wlan.chip=MT7662
+mediatek.wlan.module.postfix=_mt7662
+persist.mtk.wcn.combo.chipid=0x7662
+ro.btstack=default
