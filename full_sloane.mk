@@ -161,9 +161,13 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_PACKAGES += \
         audio.a2dp.default \
+        audio_policy.stub \
 	audio.r_submix.default \
         audio.btle.default \
-        libtinycompress
+        libtinycompress \
+        libtinymix \
+        libtinyxml \
+        libalsautils
 
 # Bluetooth
 PRODUCT_PACKAGES += \
