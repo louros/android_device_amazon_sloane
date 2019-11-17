@@ -35,7 +35,6 @@ bin/tinypcminfo
 bin/tinyplay
 bin/waveplay
 bin/vpartition
-bin/
 bin/shutdownalertdialog.sh
 bin/recovery_reporter
 bin/rpmb_svc
