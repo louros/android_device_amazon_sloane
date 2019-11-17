@@ -50,11 +50,13 @@ etc/firmware/mt7662_patch_e3_hdr.bin
 etc/firmware/dvb-fe-xc5000-1.6.114.fw
 etc/leds.xml
 etc/mtklog-config.prop
+etc/permissions/android.hardware.hdmi.cec.xml 
 etc/mixer_paths.xml
 etc/chronos.conf
 etc/clatd.conf
 etc/compat_hint.conf
 etc/powervr.ini
+etc/ping_logger.sh
 etc/wifi/p2p_supplicant_overlay.conf
 etc/wifi/wpa_supplicant_overlay.conf
 etc/wifi/wpa_supplicant.conf
@@ -173,7 +175,6 @@ lib/libMtkOmxVdec.so
 lib/libMtkOmxVenc.so
 lib/libmtkshifter.so
 lib/libnvramagentclient.so
-lib/libnvramagentclient.so
 lib/libnvram_daemon_callback.so
 lib/libnvram_platform.so
 lib/libnvram_sec.so
@@ -189,6 +190,7 @@ lib/libsics-3.0.200230.0.so
 lib/libspeech_enh_lib.so
 lib/libspeexresampler.so
 lib/libstagefrighthw.so
+lib/libstagefright_omx.so
 lib/libSwJpgCodec.so
 lib/libshowlogo.so
 lib/libthermalservice.so
@@ -323,6 +325,7 @@ lib64/libsics-3.0.200230.0.so
 lib64/libspeech_enh_lib.so
 lib64/libspeexresampler.so
 lib64/libstagefrighthw.so
+lib64/libstagefright_omx.so
 lib64/libSwJpgCodec.so
 lib64/libshowlogo.so
 lib64/libthermalservice.so
