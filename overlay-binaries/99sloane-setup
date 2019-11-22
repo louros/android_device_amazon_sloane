@@ -25,4 +25,5 @@ fi
 # Disable FireOS unused exports
 unset AMAZON_EXTRA_RESOURCE_LIST
 
-#
+# Change kmsg permissions
+chmod 0666 /dev/kmsg
