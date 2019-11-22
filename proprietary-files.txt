@@ -76,7 +76,7 @@ lib/egl/libGLES_android.so
 lib/hw/amzn_dha.mt8173.so
 lib/hw/amazon_serial.mt8173.so
 lib/hw/amzn_drmprov.mt8173.so
-lib/hw/audio.a2dp.default.so
+#lib/hw/audio.a2dp.default.so
 lib/hw/audio_policy.default.so
 lib/hw/audio.primary.mt8173.so
 lib/hw/audio.sco.default.so
@@ -229,7 +229,7 @@ lib64/egl/libGLES_android.so
 lib64/hw/amzn_dha.mt8173.so
 lib64/hw/amazon_serial.mt8173.so
 lib64/hw/amzn_drmprov.mt8173.so
-lib64/hw/audio.a2dp.default.so
+#lib64/hw/audio.a2dp.default.so
 lib64/hw/audio_policy.default.so
 lib64/hw/audio.primary.mt8173.so
 lib64/hw/audio.sco.default.so
