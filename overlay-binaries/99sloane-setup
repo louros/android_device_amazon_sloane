@@ -22,6 +22,11 @@ fi
 # Double check
 setenforce 0
 
+# Symlink tombstones to root directory
+mount -o rw,remount /
+ln -s /data/tombstones /tombstones
+mount -o ro,remount /
+
 # Remove Amazon logd stuff
 rm -rf /dev/logd
 
@@ -32,3 +37,4 @@ unset AMAZON_EXTRA_RESOURCE_LIST
 chmod 0666 /dev/kmsg
 chmod 0666 /dev/MTK_SMI
 chmod 0644 /dev/mtk_cmdq
+
