@@ -67,6 +67,4 @@
     <bool name="config_supportAutoRotation">false</bool>
     <bool name="config_forceDefaultOrientation">true</bool>
 
-
 </resources>
-    
