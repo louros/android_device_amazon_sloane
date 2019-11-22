@@ -22,6 +22,9 @@ fi
 # Double check
 setenforce 0
 
+# Remove Amazon logd stuff
+rm -rf /dev/logd
+
 # Disable FireOS unused exports
 unset AMAZON_EXTRA_RESOURCE_LIST
 
