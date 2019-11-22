@@ -1,3 +1,5 @@
+LOCAL_PATH := device/amazon/sloane
+
 # sloane it's an Android TV
 PRODUCT_IS_ATV_SDK := true
 PRODUCT_CHARACTERISTICS := tv
@@ -94,7 +96,10 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
     persist.sys.root_access=3 \
     ro.debuggable=1 \
-    persist.service.adb.enable=1  
+    persist.service.adb.enable=1
+
+# Overlay Binaries
+$(call inherit-product, $(LOCAL_PATH)/overlay-binaries/overlay-binaries.mk)
 
 # Inherit from fonts/svox
 $(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
@@ -186,14 +191,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
         ebtables \
         ethertypes
-
-# Binaries
-PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/bootmenu/ramdisk-recovery.cpio.lzma:system/recovery/ramdisk-recovery.cpio.lzma \
-     $(LOCAL_PATH)/bootmenu/2ndinitstub:system/recovery/2ndinitstub \
-     $(LOCAL_PATH)/bootmenu/2ndinit:system/recovery/2ndinit \
-     $(LOCAL_PATH)/bootmenu/manage_recovery:system/xbin/manage_recovery \
-     $(LOCAL_PATH)/bootmenu/logger:system/bin/logger
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)

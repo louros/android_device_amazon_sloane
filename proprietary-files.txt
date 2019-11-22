@@ -52,6 +52,8 @@ etc/leds.xml
 etc/mtklog-config.prop
 etc/permissions/android.hardware.hdmi.cec.xml 
 etc/mixer_paths.xml
+etc/partition_permissions.sh
+etc/throttle.sh
 etc/chronos.conf
 etc/clatd.conf
 etc/compat_hint.conf

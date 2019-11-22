@@ -1,0 +1,59 @@
+#!/system/bin/sh
+
+RECOVERY_BLOCK=/dev/block/platform/mtk-msdc.0/by-name/recovery
+RESTORE_RECOVERY=/system/recovery/restore-recovery.sh
+
+check_recovery_block()
+{
+    [ "$(dd if=$RECOVERY_BLOCK bs=8 count=1 2>/dev/null)" = "ANDROID!" ]
+    return $?
+}
+
+disable_recovery_block()
+{
+    dd if=/dev/zero of=$RECOVERY_BLOCK bs=8 count=1 2>/dev/null
+}
+
+if [ -x /sbin/sh ]; then
+    if check_recovery_block; then
+        disable_recovery_block
+    fi
+
+    mv /system/recovery-from-boot.p /system/recovery
+    sed -i s@/system/recovery-from-boot.p@/system/recovery/recovery-from-boot.p@ $RESTORE_RECOVERY
+else
+    CHECK_DISABLE=1
+    echo
+
+    echo -n "Checking current stock recovery status... "
+    if eval `dd if=$RESTORE_RECOVERY bs=1 skip=22 count=116 2>/dev/null` >/dev/null 2>&1; then
+        echo "STOCK"
+    else
+        echo "NOT STOCK"
+
+        echo -n "Checking for reason... "
+        if check_recovery_block; then
+            echo "WRONG VERSION"
+        else
+            echo "DISABLED"
+            CHECK_DISABLE=0
+        fi
+    fi
+
+    if [ $CHECK_DISABLE -eq 0 ]; then
+        echo "Stock recovery is currently disabled,"
+        echo "Would you like to enable it?"
+        echo "Type 'yes' to enable it, anything else to quit."
+        read answer
+        if [ "$answer" = "yes" ]; then
+            $RESTORE_RECOVERY >/dev/null
+        fi
+    else
+        echo "Would you like to disable stock recovery?"
+        echo "Type 'yes' to disable it, anything else to quit."
+        read answer
+        if [ "$answer" = "yes" ]; then
+            disable_recovery_block
+        fi
+    fi
+fi
