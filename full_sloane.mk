@@ -150,6 +150,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
+    device/amazon/sloane/configs/audio_param/AudioParamOptions.xml:system/etc/audio_param/AudioParamOptions.xml \
     device/amazon/sloane/configs/audio_effects.conf:system/etc/audio_effects.conf \
     device/amazon/sloane/configs/audio_policy.conf:system/etc/audio_policy.conf \
     device/amazon/sloane/configs/media_codecs.xml:system/etc/media_codecs.xml \
