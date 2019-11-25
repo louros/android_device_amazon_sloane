@@ -2,14 +2,6 @@
 # system.prop for sloane
 #
 
-# No RIL
-keyguard.no_require_sim=1
-ro.radio.use-ppp=no
-ro.config.nocheckin=yes
-ro.radio.noril=1
-ro.carrier=wifi-only
-persist.radio.noril=1
-
 # ADB on boot
 service.adb.root=1
 sys.usb.config=adb
@@ -34,10 +26,6 @@ mediatek.wlan.ctia=0
 
 #display density
 ro.sf.lcd_density=320
-
-# Wireless Display
-persist.sys.wfd.virtual=0
-persist.debug.wfd.enable=1
 
 #
 wifi.tethering.interface=ap0
@@ -166,11 +154,27 @@ ro.boot.selinux=disable
 # Enable FireOS flags
 ro.amazon.fosflags=1
 
-# MTK COMBO CHIP
+# MTK Stuff
 mediatek.wlan.chip=MT7662
 mediatek.wlan.module.postfix=_mt7662
 persist.mtk.wcn.combo.chipid=0x7662
 ro.btstack=default
+ro.carrier=uknown
+persist.radio.combo.chipid=-1
+ro.mtk_wfd_support=1
+ro.mtk_wfd_sink_support=1
+ro.mtk_wfd_hdcp_rx_support=1
+persist.debug.wfd.denable=1
+ro.mediatek.chip_ver=S01
+ro.mediatek.version.release=ALPS.W10.24.p0
+ro.mediatek.platform=MT8173
+ro.mediatek.version.sdk=1
+
+# DRM
+drm.service.enabled=true
+
+# MTK In house TEE
+mtk_in_house_tee_support=true
 
 # OTG
 persist.sys.isUsbOtgEnabled=1 
