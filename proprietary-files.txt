@@ -252,6 +252,7 @@ lib64/libamazon_remotes.so
 lib64/libaudiocompensationfilter.so
 lib64/libaudiocomponentengine.so
 #lib64/libaudiocustparam.so
+lib64/libaudiostream_jni.AMAZON.so
 lib64/libaudiodcrflt.so
 lib64/libaudioeffect_jni.so
 lib64/libaudiopolicymanagerdefault.so
