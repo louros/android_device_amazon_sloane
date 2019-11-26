@@ -1,17 +1,12 @@
 # inherit from the proprietary version
 -include vendor/amazon/sloane/BoardConfig.mk
 
-# Dalvik
-DALVIK_VM_LIB := true
-
 # Platform
 TARGET_BOARD_PLATFORM := mt8173
 TARGET_BOARD_PLATFORM_GPU := mali-720mp2
-
-# Bootloader
 TARGET_NO_BOOTLOADER := true
 
-# Architecture
+# Arch
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
@@ -32,8 +27,6 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x04000000
 BOARD_SECOND_OFFSET := 0x00f00000
-
-# We use 64 bit binder
 TARGET_USES_64_BIT_BINDER := true
 
 # MTK Headers
@@ -86,18 +79,16 @@ TARGET_HAS_WAITFORVSYNC := true
 
 # Surfaceflinger optimization for VD surfaces
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
-#NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
 # Filesystem
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 99999999
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1692925952
-#BOARD_USERDATAIMAGE_PARTITION_SIZE := null
 BOARD_CACHEIMAGE_PARTITION_SIZE := 444596224
 BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
 
-# No system.new.dat
+# Based OTA
 BLOCK_BASED_OTA := false
 
 # Exta scripts
@@ -109,6 +100,9 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto
 # Assert
 TARGET_OTA_ASSERT_DEVICE := sloane
 TARGET_BOOTLOADER_BOARD_NAME := mt8173
+
+# Dalvik
+DALVIK_VM_LIB := true
 
 # TWRP Flags
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp

@@ -25,16 +25,16 @@ export LANG=C
 
 echo "Preparing environment..."
 cd .. && cd .. && cd ..
-source ./build/envsetup.sh > /dev/null 2>&1
+source ./build/envsetup.sh
 
 echo "Prepare for cook time..."
-lunch cm_$device-$var > /dev/null 2>&1
+lunch cm_$device-$var
 
 read -p "Cleanup old files? y/n >> " clean
 if [ $clean = "y" ]; then
    echo "Cleaning up..."
-   make clobber > /dev/null 2>&1
-   make clean > /dev/null 2>&1
+   make clobber
+   make clean
 else
    echo "Not cleaning up..."
 fi

@@ -157,9 +157,6 @@ PRODUCT_COPY_FILES += \
     device/amazon/sloane/configs/media_profiles.xml:system/etc/media_profiles.xml \
     device/amazon/sloane/configs/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg
 
-# Fosflags
-PRODUCT_COPY_FILES += device/amazon/sloane/rootdir/init.fosflags.sh:system/etc/init.fosflags.sh
-
 # Thermal
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/thermal.policy.conf:system/etc/.tp/thermal.policy.conf \
