@@ -19,9 +19,6 @@ TARGET_2ND_CPU_VARIANT := cortex-a15
 TARGET_CPU_ABI_LIST := arm64-v8a,armeabi-v7a,armeabi
 TARGET_CPU_ABI_LIST_64_BIT := arm64-v8a
 
-# Custparam
-MTK_AOSP_ENHANCEMENT := true
-
 # Kernel
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x04000000 --tags_offset 0x00000100
 TARGET_PREBUILT_KERNEL := device/amazon/sloane/prebuilt/kernel

@@ -44,7 +44,6 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_vorbisdec \
     libstagefright_soft_vpxdec \
     libstagefright_soft_vpxenc \
-    libstagefright_soft_ddpdec \
     mdnsd \
     requestsync
 
