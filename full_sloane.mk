@@ -171,7 +171,13 @@ PRODUCT_PACKAGES += \
         libtinycompress \
         libtinymix \
         libtinyxml \
+        libaudiocustparam \
         libalsautils
+
+# nvram
+PRODUCT_PACKAGES += \
+        libnvram \
+        libcustom_nvram
 
 # Bluetooth
 PRODUCT_PACKAGES += \

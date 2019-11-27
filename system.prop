@@ -27,6 +27,10 @@ mediatek.wlan.ctia=0
 #display density
 ro.sf.lcd_density=320
 
+# Remote
+wlan.interface.p2p.group=p2p-wlan0-0
+persist.sys.p2p.go.chnl=5180
+
 #
 wifi.tethering.interface=ap0
 #
