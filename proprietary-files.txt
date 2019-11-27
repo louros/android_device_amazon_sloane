@@ -103,7 +103,7 @@ lib/libamr_wrap.so
 lib/libamazon_remotes.so
 lib/libaudiocompensationfilter.so
 lib/libaudiocomponentengine.so
-#lib/libaudiocustparam.so
+lib/libaudiocustparam.so
 lib/libaudiodcrflt.so
 lib/libaudioeffect_jni.so
 lib/libaudioflinger.so
