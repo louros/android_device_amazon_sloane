@@ -44,6 +44,7 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_vorbisdec \
     libstagefright_soft_vpxdec \
     libstagefright_soft_vpxenc \
+    libstagefright_soft_ddpdec \
     mdnsd \
     requestsync
 
@@ -88,15 +89,6 @@ PRODUCT_PACKAGES += \
 # Enable frame-exact AV sync
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.media.avsync=true
-
-# Enable adb as root in boot to debug
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.adb.secure=0 \
-    persist.adb.notify=0 \
-    ro.secure=0 \
-    persist.sys.root_access=3 \
-    ro.debuggable=1 \
-    persist.service.adb.enable=1
 
 # Overlay Binaries
 $(call inherit-product, $(LOCAL_PATH)/overlay-binaries/overlay-binaries.mk)
