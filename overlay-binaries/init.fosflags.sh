@@ -16,3 +16,11 @@ su -c "chown bluetooth:bluetooth /dev/ttyGS0"
 su -c "chmod 0666 /dev/stpbt"
 su -c "chmod 0666 /dev/ttyGS0"
 su -c "chown root:system /dev/ozwpan /sys/class/ozmo_wpan/ozwpan/select /sys/class/ozmo_wpan/ozwpan/mode"
+
+# Display info
+density=`wm density`
+size=`wm size`
+log "~~~Display info start~~~"
+log $density
+log $size
+log "~~~Display info end~~~"
