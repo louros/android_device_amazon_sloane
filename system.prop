@@ -25,7 +25,7 @@ mediatek.wlan.ctia=0
 # MTK, mtk03034 20101213}
 
 #display density
-ro.sf.lcd_density=320
+ro.sf.lcd_density=240
 
 # Remote
 wlan.interface.p2p.group=p2p-p2p0-0
