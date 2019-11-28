@@ -59,9 +59,6 @@ etc/clatd.conf
 etc/compat_hint.conf
 etc/powervr.ini
 etc/ping_logger.sh
-etc/wifi/p2p_supplicant_overlay.conf
-etc/wifi/wpa_supplicant_overlay.conf
-etc/wifi/wpa_supplicant.conf
 etc/Wireless/RT2870STA/MT76x2STA.dat
 etc/Wireless/RT2870STA/SingleSKU.dat
 etc/Wireless/RT2870STA/SingleSKU_AU.dat
