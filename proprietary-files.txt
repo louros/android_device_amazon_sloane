@@ -167,6 +167,14 @@ lib/libm.so
 lib/libmtk_drvb.so
 lib/libmtkjpeg.so
 lib/libmtklimiter.so
+lib/libMtkOmxAacEnc.so
+lib/libMtkOmxAmrEnc.so
+lib/libMtkOmxAMRNBDec.so
+lib/libMtkOmxAMRWBDec.so
+lib/libMtkOmxAwbEnc.so
+lib/libMtkOmxFlacDec.so
+lib/libMtkOmxG711Dec.so
+lib/libMtkOmxVorbisDec.so
 lib/libMtkOmxAIVPlayer.so
 lib/libMtkOmxCore.so
 lib/libMtkOmxMp3Dec.so
