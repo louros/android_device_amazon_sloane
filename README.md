@@ -23,10 +23,11 @@ This branch is for building LineageOS 12.1/CM12.1
 - [x] Boots
 - [ ] OMX
 - [x] HWC
-- [ ] Sound
-- [ ] Bluetooth
+- [x] Sound
+- [x] Bluetooth
 - [x] Wi-Fi
-- [ ] Cast screen
+- [ ] Wi-Fi Direct
+- [x] Cast screen
 
 ## Build ##
 Read our [build manual](https://github.com/R0rt1z2/android_device_amazon_sloane/blob/cm-12.1/BUILD.md "Build Manual")
