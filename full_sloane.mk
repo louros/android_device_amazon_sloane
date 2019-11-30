@@ -76,7 +76,7 @@ PRODUCT_PACKAGES += \
     local_time.default \
     screenrecord   
 
-#TV
+# TV Packagess
 PRODUCT_PACKAGES += \
     TvProvider \
     TvSettings \
@@ -153,7 +153,7 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/thermal.policy.conf:system/etc/.tp/thermal.policy.conf \
      $(LOCAL_PATH)/configs/.ht120.mtc:system/etc/.tp/.ht120.mtc
 
-# Wi-Fi configs
+# WI-FI
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
      $(LOCAL_PATH)/configs/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
@@ -168,7 +168,6 @@ PRODUCT_PACKAGES += \
         libtinycompress \
         libtinymix \
         libtinyxml \
-        libaudiocustparam \
         libalsautils
 
 # Bluetooth
@@ -188,10 +187,10 @@ PRODUCT_PACKAGES += \
         ebtables \
         ethertypes
 
-# call dalvik heap config
+# Call dalvik heap config
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
 
-# call hwui memory config
+# Call hwui memory config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Get non-open-source specific aspects

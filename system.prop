@@ -6,6 +6,7 @@
 service.adb.root=1
 sys.usb.config=adb
 
+# Rild
 rild.libpath=/system/lib/mtk-ril.so
 rild.libargs=-d /dev/ttyC0
 
@@ -24,26 +25,21 @@ ro.mediatek.wlan.p2p=1
 mediatek.wlan.ctia=0
 # MTK, mtk03034 20101213}
 
-#display density
+# LCD/Display Density
 ro.sf.lcd_density=240
 
-# Remote
+# P2P config
 wlan.interface.p2p.group=p2p-p2p0-0
 persist.sys.p2p.go.chnl=5220
-
-#
-wifi.tethering.interface=ap0
-#
-
-#
-# system prop for opengles version
-#
-# 196609 is decimal for 0x30001 to report version 3.1
-ro.opengles.version=196609
-
 wifi.direct.interface=p2p0
 
-# LAB usb
+# Wi-Fi tethering config
+wifi.tethering.interface=ap0
+
+# OpenGLES
+ro.opengles.version=196609
+
+# Amazon's lab126 usb
 ro.usb.vid=1949
 ro.usb.pid.adb=0240
 ro.usb.pid.mtp.adb=0241
@@ -55,6 +51,7 @@ ro.sys.usb.mtp.whql.enable=0
 # Power off opt in IPO
 sys.ipo.pwrdncap=2
 
+# Storage type
 ro.sys.usb.storage.type=mtp,mass_storage,adb
 
 # Enable adb and mtp
@@ -64,7 +61,7 @@ persist.sys.usb.config=mtp,adb
 ro.sys.usb.bicr=yes
 
 # USB Charge only function
-ro.sys.usb.charging.only=false
+ro.sys.usb.charging.only=n
 
 #
 # Set default adb over usb debugging
@@ -74,18 +71,16 @@ persist.sys.usb.debugging=y
 # Hold wakelock by default to prevent system from suspending
 persist.sys.hold.wakelock=y
 
-# audio
+# Audio
 ro.camera.sound.forced=0
 ro.audio.silent=0
-#ACOS_MOD_BEGIN {amazon_audio}
+
+# Amazon Audio
 media.aac_51_output_enabled=true
-#ACOS_MOD_END {amazon_audio}
 
+# Kernel and Zygote
 ro.zygote.preload.enable=0
-
 ro.kernel.zio=38,108,105,16
-#ro.kernel.qemu=0
-#ro.kernel.qemu.gles=0
 
 # Disable dirty region for Mali
 debug.hwui.render_dirty_regions=false
@@ -94,38 +89,36 @@ debug.hwui.render_dirty_regions=false
 ro.hwui.texture_cache_size=48
 ro.hwui.layer_cache_size=32
 
-# add for HDMI
+# HDMI
 ro.mtk_hdmi_support=1
-
 ro.mtk_internal_hdmi_support=1
-# add for 8173box cec device type
+
+# HDMI device type (8173box)
 ro.hdmi.device_type=4
 
-# add for 8173box
+# MTK 8173box defines
 ro.mtk_alps_box_support=1
-# for ethernet settings UI
+
+# Ethernet
 ro.mtk_alps_ethernet_ext=1
-#add for hdcp key
+
+# HDCP key
 ro.mtk_drm_key_mng_support=1
 ro.mtk_hdmi_hdcp_support=1
 
-# system prop for requesting Master role in incoming Bluetooth connection.
-#
-ro.bluetooth.request.master=true
-#
-# system prop for Bluetooth Auto connect for remote initated connections
-#
+# Bluetooth Auto connect for remote initated connections
 ro.bluetooth.remote.autoconnect=true
 
+# Screenshot
 debug.allow_screenshot=true
 
+# Log tag
 log.tag.ControllerManagerLogs=DEBUG
 
-# ACOS_MOD_BEGIN {directtexture}
+# Direct texture
 com.mtk_enhancement = true
-# ACOS_MOD_END {directtexture}
 
-# maximum backup size for factory reset whitelist in KB (512 MB)
+# Maximum backup size for factory reset whitelist in KB (512 MB)
 ro.recovery.wl.maxstore=524288
 
 # Disable lockscreen by default.
@@ -138,18 +131,16 @@ ro.lockscreen.disable.default=1
 # 0 MDP INFO (the entire MDP log)
 persist.dpframework.log.level = 3
 
-# ACOS_MOD_BEGIN {mtk_enhancement}
-# whether or not to use HWC for virtual displays
+# HWC for virtual displays
 persist.hwc.enable_vds=0
-# ACOS_MOD_END {mtk_enhancement}
 
 # Netflix
 ro.nrdp.modelgroup=FIRETVSTB2015
 
-# wifi rssi->bar thresholds
+# Wi-Fi rssi
 persist.wifi.rssi.thresholds=-84,-73,-64,-60
 
-# disabling this in addition to android.software.backup is needed to stop BackupManagerService from running
+# Stop BackupManagerService from running
 ro.backup.disable=true
 
 # Disable SELinux
@@ -158,7 +149,7 @@ ro.boot.selinux=disable
 # Enable FireOS flags
 ro.amazon.fosflags=1
 
-# MTK Stuff
+# MTK Flags
 mediatek.wlan.chip=MT7662
 mediatek.wlan.module.postfix=_mt7662
 persist.mtk.wcn.combo.chipid=0x7662

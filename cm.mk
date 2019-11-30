@@ -4,9 +4,11 @@ $(call inherit-product, vendor/cm/config/common_full_tv.mk)
 # Inherit device configuration for Fire TV 2.
 $(call inherit-product, device/amazon/sloane/full_sloane.mk)
 
+# Screen
 TARGET_SCREEN_WIDTH := 600
 TARGET_SCREEN_HEIGHT := 1024
 
+# Device model
 PRODUCT_DEVICE := sloane
 PRODUCT_NAME := cm_sloane
 PRODUCT_RELEASE_NAME := sloane
