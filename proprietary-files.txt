@@ -15,6 +15,7 @@ bin/dmesg_log.sh
 bin/dump-ramdump.sh
 bin/hostapd
 bin/hostapd_cli
+bin/guiext-server
 bin/ext4_resize
 bin/hdmi
 bin/idme
