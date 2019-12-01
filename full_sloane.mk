@@ -178,6 +178,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
         power.default
 
+# Lights
+PRODUCT_PACKAGES += \
+        lights.mt8173
+
 # network
 PRODUCT_PACKAGES += \
         netd
