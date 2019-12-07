@@ -26,7 +26,7 @@ This branch is for building LineageOS 12.1/CM12.1
 - [x] Sound
 - [x] Bluetooth
 - [x] Wi-Fi
-- [ ] Wi-Fi Direct
+- [x] Wi-Fi Direct
 - [x] Cast screen
 
 ## Build ##
