@@ -8,6 +8,6 @@
 /system/xbin/su -c "chmod 0666 /dev/stpbt"
 /system/xbin/su -c "chmod 0666 /dev/ttyGS0"
 /system/xbin/su -c "chmod 0666 /dev/ttyGS0"
-/system/bin/log "---chown bluetooth start---"
+/system/bin/log "---chown bluetooth end---"
 /system/bin/log "---chown ozwpan start---"
 /system/xbin/su -c "chown root:system /dev/ozwpan /sys/class/ozmo_wpan/ozwpan/select /sys/class/ozmo_wpan/ozwpan/mode"
