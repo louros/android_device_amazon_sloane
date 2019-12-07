@@ -32,6 +32,7 @@ ro.sf.lcd_density=240
 wlan.interface.p2p.group=p2p-p2p0-0
 persist.sys.p2p.go.chnl=5220
 wifi.direct.interface=p2p0
+wifi.direct.multicast=1
 
 # Wi-Fi tethering config
 wifi.tethering.interface=ap0
