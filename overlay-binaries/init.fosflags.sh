@@ -21,18 +21,18 @@ su -c "chown root:system /dev/ozwpan /sys/class/ozmo_wpan/ozwpan/select /sys/cla
 # "booted"
 # When device is booted:
 booted=$(getprop dev.bootcomplete)
-while [ "$booted" != "1" ]
+echo $booted
+while [ "$booted" = "" ]
 do
-         echo "Waiting for boot"
-         $booted=$(getprop dev.bootcomplete)
+         booted=$(getprop dev.bootcomplete)
+         sleep 7
+         log "Waiting for boot"
 done
-sleep 1 # Delay for the user
+log "Booted up"
 su -c "svc wifi disable"
 su -c "svc wifi enable"
 am start -a android.settings.WIFI_IP_SETTINGS
+sleep 3
 input tap 223 850
 sleep 20 # Here user presses home button 15-20 secs
 input tap 223 300 # Simulate touch to connect the remote
-settings --user 0 put secure show_ime_with_hard_keyboard 1
-settings --user 0 put system screen_off_timeout 900000
-settings --user 0 put global policy_control immersive.status=*
