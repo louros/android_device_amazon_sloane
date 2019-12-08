@@ -59,6 +59,7 @@ etc/clatd.conf
 etc/compat_hint.conf
 etc/powervr.ini
 etc/ping_logger.sh
+etc/wifi_log_levels.sh
 etc/wifi_gain.sh
 etc/Wireless/RT2870STA/MT76x2STA.dat
 etc/Wireless/RT2870STA/SingleSKU.dat
