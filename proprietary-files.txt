@@ -421,6 +421,7 @@ xbin/iwlist
 xbin/iwpriv
 usr/keylayout/lightning-device.kl
 usr/keychars/lightning-device.kcm
+usr/keychars/Generic.kcm
 usr/idc/amazon_touch.idc
 usr/idc/lightning-device.idc
 usr/keylayout/Vendor_0b05_Product_4500.kl
