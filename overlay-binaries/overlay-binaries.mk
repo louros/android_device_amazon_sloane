@@ -19,4 +19,5 @@ PRODUCT_COPY_FILES += \
 
 # Some binaries
 PRODUCT_COPY_FILES += \
-     $(OVERLAY_BIN)/logger:system/bin/logger
+     $(OVERLAY_BIN)/logger:system/bin/logger \
+     $(OVERLAY_BIN)/start-p2p.sh:system/bin/start-p2p.sh
