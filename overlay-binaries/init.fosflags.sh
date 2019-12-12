@@ -1,6 +1,14 @@
 #!/system/bin/sh
 PATH=/sbin:/system/sbin:/system/bin:/system/xbin
 
+# OZWPAN
+readonly OZWPAN_DEV_FILE="/dev/ozwpan"
+readonly OZWPAN_SELECT_FILE="/sys/class/ozmo_wpan/ozwpan/select"
+readonly OZWPAN_MODE_FILE="/sys/class/ozmo_wpan/ozwpan/mode"
+su -c "chown root:system /dev/ozwpan /sys/class/ozmo_wpan/ozwpan/select /sys/class/ozmo_wpan/ozwpan/mode"
+su -c "chown root:system ${OZWPAN_DEV_FILE} ${OZWPAN_SELECT_FILE} ${OZWPAN_MODE_FILE}"
+su -c "chmod 0666 ${OZWPAN_DEV_FILE} ${OZWPAN_SELECT_FILE} ${OZWPAN_MODE_FILE}"
+
 # "early-boot"
 # SELinux enforce
 setenforce 0
@@ -10,13 +18,14 @@ log "Initialized init.d support"
 
 # "booting"
 # Set some permissions before boot:
-log "Change bluetooth permissions"
+log "Change /dev permissions"
 su -c "chmod 0666 /dev/MTK_SMI"
 su -c "chown bluetooth:bluetooth /dev/stpbt"
 su -c "chown bluetooth:bluetooth /dev/ttyGS0"
+su -c "chown wifi:wifi /dev/wmtWifi"
+su -c "chmod 0666 /dev/wmtWifi"
 su -c "chmod 0666 /dev/stpbt"
 su -c "chmod 0666 /dev/ttyGS0"
-su -c "chown root:system /dev/ozwpan /sys/class/ozmo_wpan/ozwpan/select /sys/class/ozmo_wpan/ozwpan/mode"
 
 # "booted"
 # When device is booted:
