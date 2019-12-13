@@ -173,6 +173,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
         bluetooth.default
 
+# Amazon's btremoted
+PRODUCT_PACKAGES += \
+        btremoted
+
 # Power
 PRODUCT_PACKAGES += \
         power.default
