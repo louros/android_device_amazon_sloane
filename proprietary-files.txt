@@ -68,6 +68,8 @@ etc/throttle.sh
 etc/chronos.conf
 etc/clatd.conf
 etc/compat_hint.conf
+etc/common_device_policy.xml
+etc/privacy_filter.conf
 etc/powervr.ini
 etc/ping_logger.sh
 etc/wifi_log_levels.sh
