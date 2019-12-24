@@ -5,8 +5,8 @@ PATH=/sbin:/system/sbin:/system/bin:/system/xbin
 readonly OZWPAN_DEV_FILE="/dev/ozwpan"
 readonly OZWPAN_SELECT_FILE="/sys/class/ozmo_wpan/ozwpan/select"
 readonly OZWPAN_MODE_FILE="/sys/class/ozmo_wpan/ozwpan/mode"
-su -c "chown root:system /dev/ozwpan /sys/class/ozmo_wpan/ozwpan/select /sys/class/ozmo_wpan/ozwpan/mode"
-su -c "chown root:system ${OZWPAN_DEV_FILE} ${OZWPAN_SELECT_FILE} ${OZWPAN_MODE_FILE}"
+su -c "chown root:root /dev/ozwpan /sys/class/ozmo_wpan/ozwpan/select /sys/class/ozmo_wpan/ozwpan/mode"
+su -c "chown root:root ${OZWPAN_DEV_FILE} ${OZWPAN_SELECT_FILE} ${OZWPAN_MODE_FILE}"
 su -c "chmod 0666 ${OZWPAN_DEV_FILE} ${OZWPAN_SELECT_FILE} ${OZWPAN_MODE_FILE}"
 
 # "early-boot"
@@ -30,6 +30,7 @@ su -c "chmod 0666 /dev/ttyGS0"
 # "booted"
 # When device is booted:
 booted=$(getprop dev.bootcomplete)
+remoted=$(cat sys/class/ozmo_wpan/ozwpan/devices | grep SLEEP)
 echo $booted
 while [ "$booted" = "" ]
 do
@@ -37,10 +38,13 @@ do
          sleep 7
          log "Waiting for boot"
 done
-su -c "setprop net.hostname amazon-fireTV2" # This avoids of ozwpan being deleted (Don't know the reason)
 log "Booted up"
-su -c "svc wifi disable"
-su -c "svc wifi enable"
-am start -n com.android.settings/.Settings\$WifiP2pSettingsActivitysleep 3
-sleep 20 # Here user presses home button 15-20 secs
-input tap 223 300 # Simulate touch to connect the remote
+su -c "setprop net.hostname amazon-fireTV2" # This avoids of ozwpan being deleted (Don't know the reason)
+while [ "$remoted" = "" ]
+do
+         wpa_cli -g@android:wpa_wlan0 IFNAME=p2p0 p2p_group_add persistent
+         echo -n "a p2p-p2p0-0" > /sys/class/ozmo_wpan/ozwpan/bind
+         wpa_cli -g@android:wpa_wlan0 IFNAME=p2p-p2p0-0 wps_pbc
+         sleep 1
+         remoted=$(cat sys/class/ozmo_wpan/ozwpan/devices | grep SLEEP)
+done
