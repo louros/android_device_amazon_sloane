@@ -152,6 +152,10 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/thermal.policy.conf:system/etc/.tp/thermal.policy.conf \
      $(LOCAL_PATH)/configs/.ht120.mtc:system/etc/.tp/.ht120.mtc
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayouts/Generic.kl:system/usr/keylayout/Generic.kl
+
 # WI-FI
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
