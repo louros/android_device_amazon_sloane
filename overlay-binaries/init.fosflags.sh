@@ -37,6 +37,7 @@ do
          sleep 7
          log "Waiting for boot"
 done
+su -c "setprop net.hostname amazon-fireTV2" # This avoids of ozwpan being deleted (Don't know the reason)
 log "Booted up"
 su -c "svc wifi disable"
 su -c "svc wifi enable"
