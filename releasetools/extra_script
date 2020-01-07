@@ -1,6 +1,5 @@
 set_metadata("/system/etc/init.fosflags.sh", "uid", 0, "gid", 0, "mode", 0755, "selabel", "u:object_r:system_file:s0");
-set_metadata("/system/bin/logger", "uid", 0, "gid", 0, "mode", 0755, "selabel", "u:object_r:system_file:s0");
-set_metadata("/system/bin/start-p2p.sh", "uid", 0, "gid", 0, "mode", 0755, "selabel", "u:object_r:system_file:s0");
+set_metadata("/system/xbin/debug_tool", "uid", 0, "gid", 0, "mode", 0755, "selabel", "u:object_r:system_file:s0");
 symlink("/system/framework/org.cyanogenmod.platform.jar", "/system/framework/fosinit.jar");
 symlink("/system/framework/org.cyanogenmod.hardware.jar", "/system/framework/fosservices.jar");
 symlink("/system/framework/org.cyanogenmod.platform.jar", "/system/framework/AWSRemoteConfigurationAndroidClient.jar");
