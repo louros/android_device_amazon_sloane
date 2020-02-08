@@ -403,6 +403,7 @@ vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/libdlb_converter.so
 vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/mediadrm/libdrmclearkeyplugin.so
+vendor/lib/mediadrm/libplayreadydrmplugin.so	
 vendor/lib/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/soundfx/libswdap.so
