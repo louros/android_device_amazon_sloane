@@ -7,12 +7,10 @@ LOCAL_SRC_FILES:=   \
 
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_CFLAGS := -Wno-missing-field-initializers
+LOCAL_CFLAGS := -Wno-missing-field-initializers -Wno-type-limits
 
 LOCAL_PROPRIETARY_MODULE := true
 
 LOCAL_MODULE:= debug_tool
-
-LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
 
 include $(BUILD_EXECUTABLE)

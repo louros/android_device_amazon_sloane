@@ -181,6 +181,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
         btremoted
 
+# debug_tool
+PRODUCT_PACKAGES += \
+        debug_tool
+
 # Power
 PRODUCT_PACKAGES += \
         power.default
